@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class IfAbfrage {
     public static void main(String[] args) {
-        //String ampelFarbe = "Rot";
+        //String farbe = "Rot";
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please provide color of Traffic light");
 
-        String ampelFarbe = scanner.nextLine();
+        String farbe = scanner.nextLine();
 
-        switch(ampelFarbe){
+        switch(farbe){
             case "Rot":
                 System.out.println("Bitte warten");
                 break;
@@ -23,11 +23,11 @@ public class IfAbfrage {
                 System.out.println("Fehler! Diese Farbe gibt es nicht.");
         }
 
-        if(ampelFarbe.equals("Rot")){
+        if(farbe.equals("Rot")){
             System.out.println("Bitte warten");
-        } else if(ampelFarbe.equals("Gelb")) {
+        } else if(farbe.equals("Gelb")) {
             System.out.println("Gleich geht es los");
-        } else if(ampelFarbe.equals("Grün")) {
+        } else if(farbe.equals("Grün")) {
             System.out.println("Weg frei");
         } else {
             System.out.println("Fehler! Diese Farbe gibt es nicht.");
