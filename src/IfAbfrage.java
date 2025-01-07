@@ -1,6 +1,13 @@
+import java.util.Scanner;
+
 public class IfAbfrage {
     public static void main(String[] args) {
-        String ampelFarbe = "Rot";
+        //String ampelFarbe = "Rot";
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please provide color of Traffic light");
+
+        String ampelFarbe = scanner.nextLine();
 
         switch(ampelFarbe){
             case "Rot":
