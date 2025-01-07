@@ -1,4 +1,4 @@
-package Basics;
+package Basics.SwitchAndIf;
 
 public class Switch {
     public static void main(String[] args) {

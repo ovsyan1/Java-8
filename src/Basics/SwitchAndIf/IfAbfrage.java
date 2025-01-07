@@ -1,4 +1,4 @@
-package Basics;
+package Basics.SwitchAndIf;
 
 import java.util.Scanner;
 
