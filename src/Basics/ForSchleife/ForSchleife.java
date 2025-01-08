@@ -45,7 +45,17 @@ public class ForSchleife {
                 System.out.print(i);
                 System.out.print(" ");
             }
+        }
 
+        System.out.println();
+
+        for(int i = 3;i >= 1;i--){
+            System.out.print(i);
+            System.out.print(" ");
+            for(int j = 1;j<=i;j++){
+                System.out.print(j);
+                System.out.print(" ");
+            }
         }
     }
 
