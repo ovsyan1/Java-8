@@ -20,7 +20,7 @@ public class BreakAndContinue {
 	while(counter <= Integer.MAX_VALUE) {
 		double randomValue = Math.random();
 		
-		if(randomValue >= 0.1 || randomValue <= 0.2) {
+		if(randomValue >= 0.1 && randomValue <= 0.2) {
 			System.out.println(randomValue);
 			counter++;
 			if(counter == 10) {
