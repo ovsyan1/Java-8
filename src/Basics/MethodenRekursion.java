@@ -31,11 +31,12 @@ public class MethodenRekursion {
 	}
 	
 	static int sumOfSums(int a, int b) {
-		if(a == 0 && b == 0) {
+		if(a <= 0  || b <= 0) {
 			return 0;
-		}
-
+		} 
+		
 		return (a + b)  + sumOfSums(--a, --b);
+		
 	}
 
 }
