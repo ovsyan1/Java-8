@@ -99,8 +99,7 @@ class Person {
 		return  firstName + "\n" + lastName + "\n" + yearOfBirth + "\n" + postalCode;
 	}
 	
-	static String getMustermann(Person p) {
-		//return "Max Mustermann, Geburtsjahr: 1960, Plz: 12345";
-		return p.vorname + "" + p.nachname + ", Geburtsjahr: " + p.geburtsjahr + ", Plz: " + p.postleitzahl;
+	static Person getMustermann() {
+		return new Person("Max", "Mustermann", 1960, 12345);
 	}
 }
