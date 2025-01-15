@@ -1,4 +1,4 @@
-package klassen;
+package Klassen;
 
 public class Root {
 
