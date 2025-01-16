@@ -29,10 +29,10 @@ public class Root {
 }
 
 class Person {
-	String vorname;
-	String nachname;
-	int geburtsjahr;
-	int postleitzahl;
+	private String vorname;
+	private String nachname;
+	private int geburtsjahr;
+	private int postleitzahl;
 	
 	Person() {}
 	
