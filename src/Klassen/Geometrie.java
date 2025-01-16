@@ -11,9 +11,8 @@ public class Geometrie {
         ". " +
         new Rechteck(
           random.nextInt(1, 20),
-          random.nextInt(1, 20))
-          .toString()
-      );
+          random.nextInt(1, 20)
+      ));
     }
 
     System.out.println("\n***********");
@@ -24,15 +23,17 @@ public class Geometrie {
 
     Rechteck rechteck = new Rechteck(5, 10);
 
-    System.out.println(rechteck.toString());
+    System.out.println(rechteck);
 
     rechteck.setNeuBreiteUndHoehe(8, 8);
 
-    System.out.println(rechteck.toString());
+    System.out.println(rechteck);
 
     Rechteck.setNeuBreiteUndHoeheStatic(rechteck, 2, 3);
 
-    System.out.println(rechteck.toString());
+    System.out.println(rechteck);
+
+    System.out.println(new Car());
   }
 }
 
@@ -50,6 +51,7 @@ class Rechteck {
     System.out.println("Masse: " + this.masse);
   }
 
+  @Override
   public String toString() {
     return "Rechteck (" + this.breite + " X " + this.hoehe + ")";
   }
@@ -75,7 +77,10 @@ class Kreis {
     System.out.println("Radius: " + radius);
   }
 
+  @Override
   public String toString() {
     return "Kreis. R = " + this.radius;
   }
 }
+
+class Car {}
