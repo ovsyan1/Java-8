@@ -29,8 +29,8 @@ public class Root {
 }
 
 class Person {
-	private String vorname;
-	private String nachname;
+	private String vorname = "-";
+	private String nachname = "-";
 	private int geburtsjahr;
 	private int postleitzahl;
 	
@@ -91,8 +91,10 @@ class Person {
 	}
 	
 	public String toString() {
-		String firstName ="Vorname: " + (this.vorname.trim().isEmpty() ? "-" : this.vorname);
-		String lastName = "Nachname: " + (this.nachname.trim().isEmpty() ? "-" : this.nachname);
+		// String firstName ="Vorname: " + (this.vorname.trim().isEmpty() ? "-" : this.vorname);
+		// String lastName = "Nachname: " + (this.nachname.trim().isEmpty() ? "-" : this.nachname);
+		String firstName ="Vorname: " + this.vorname;
+		String lastName = "Nachname: " + this.nachname;
 		String yearOfBirth = "Geburtsjahr: " + (this.geburtsjahr > 0 ? this.geburtsjahr : "-");
 		String postalCode = "Plz: " + (this.postleitzahl > 0 ? this.postleitzahl : "-");
 		
