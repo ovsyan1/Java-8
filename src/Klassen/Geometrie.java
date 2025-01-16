@@ -12,7 +12,7 @@ public class Geometrie {
         new Rechteck(
           random.nextInt(1, 20),
           random.nextInt(1, 20)
-      ));
+        ));
     }
 
     System.out.println("\n***********");
@@ -32,8 +32,6 @@ public class Geometrie {
     Rechteck.setNeuBreiteUndHoeheStatic(rechteck, 2, 3);
 
     System.out.println(rechteck);
-
-    System.out.println(new Car());
   }
 }
 
@@ -82,5 +80,3 @@ class Kreis {
     return "Kreis. R = " + this.radius;
   }
 }
-
-class Car {}
