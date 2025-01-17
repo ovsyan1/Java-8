@@ -41,6 +41,9 @@ class Rechteck {
   private int masse;
 
   Rechteck(int breite, int hoehe) {
+    if(breite <= 0 || hoehe <= 0){
+      throw new IllegalArgumentException("Breite und höhe muss positiv sein! Aktuell breite: " + breite + " Hoehe:" + hoehe);
+    }
     this.breite = breite;
     this.hoehe = hoehe;
   }
@@ -59,11 +62,12 @@ class Rechteck {
   }
 
   void setNeuBreiteUndHoehe(int neueBreite, int neueHoehe) {
-    if(neueBreite > 0 && neueHoehe > 0) {
+    if(neueBreite <= 0 || neueHoehe <= 0) {
+
+      throw new IllegalArgumentException("Breite und Hohe should positive and bigger then 0 be");
+    } else {
       this.breite = neueBreite;
       this.hoehe = neueHoehe;
-    } else {
-      System.out.println("Breite und Hohe should positive and bigger then 0 be");
     }
 
   }
