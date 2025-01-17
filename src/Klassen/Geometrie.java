@@ -29,7 +29,7 @@ public class Geometrie {
 
     System.out.println(rechteck);
 
-    Rechteck.setNeuBreiteUndHoeheStatic(rechteck, 2, 3);
+    Rechteck.setNeuBreiteUndHoeheStatic(rechteck, -2, 3);
 
     System.out.println(rechteck);
   }
@@ -59,8 +59,13 @@ class Rechteck {
   }
 
   void setNeuBreiteUndHoehe(int neueBreite, int neueHoehe) {
-    this.breite = neueBreite;
-    this.hoehe = neueHoehe;
+    if(neueBreite > 0 && neueHoehe > 0) {
+      this.breite = neueBreite;
+      this.hoehe = neueHoehe;
+    } else {
+      System.out.println("Breite und Hohe should positive and bigger then 0 be");
+    }
+
   }
 }
 
