@@ -10,8 +10,8 @@ public class Geometrie {
       System.out.println(i +
         ". " +
         new Rechteck(
-          random.nextInt(1, 20),
-          random.nextInt(1, 20)
+          random.nextInt(1, 21), // not include, it will be numbers from 1 to 20
+          random.nextInt(1, 21)
         ));
     }
 
