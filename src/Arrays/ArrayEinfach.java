@@ -13,7 +13,7 @@ public class ArrayEinfach {
 
         System.out.println("deutscheUmlaute ----> " + Arrays.toString(deutscheUmlaute()));
 
-        deutscheBuchstaben();
+        System.out.println(Arrays.toString(deutscheBuchstaben()));
 
         System.out.println("Math Konstanten ----> " + Arrays.toString(getMathKonstanten()));
 
@@ -56,12 +56,30 @@ public class ArrayEinfach {
         return new char[]{'ä', 'ö', 'ü'};
     }
 
-    static void deutscheBuchstaben() {
-        char[] arr = new char[30];
+    static char[] deutscheBuchstaben() {
+        final int ALPHABET_LENGTH = 30;
+        char[] alphabet = new char[ALPHABET_LENGTH];
+        char[] deutscheAlphabet = new char[ALPHABET_LENGTH];
 
-        for (char i = 'a'; i <= 'z'; i++) {
-            //arr[i] = i;
+        //char[] deutscheUmlautePlusEszett = join(deutscheUmlaute(), new char[]{'ß'}); // TODO: override join return type to char
+
+        for (char i = 'a', j = 0; i <= 'z'; i++, j++) {
+            alphabet[j] = i;
         }
+
+        for (int i = 0; i < alphabet.length; i++) {
+            deutscheAlphabet[i] = alphabet[i];
+        }
+
+        for (int q = 0; q < deutscheUmlaute().length; q++) {
+            deutscheAlphabet[(alphabet.length - deutscheUmlaute().length - new char[]{'ß'}.length) + q] = deutscheUmlaute()[q];
+        }
+
+        for (int j = 0; j < new char[]{'ß'}.length; j++) {
+            deutscheAlphabet[(alphabet.length - new char[]{'ß'}.length) + j] = new char[]{'ß'}[j];
+        }
+
+        return deutscheAlphabet;
     }
 
     static double[] getMathKonstanten() {
@@ -102,11 +120,11 @@ public class ArrayEinfach {
 
         int[] result = new int[len1 + len2];
 
-        for(int i = 0; i < arr1.length; i++) {
+        for (int i = 0; i < arr1.length; i++) {
             result[i] = arr1[i];
         }
 
-        for(int j = 0; j < arr2.length; j++) {
+        for (int j = 0; j < arr2.length; j++) {
             result[len1 + j] = arr2[j];
         }
 
