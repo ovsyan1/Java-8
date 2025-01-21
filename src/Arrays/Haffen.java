@@ -7,11 +7,11 @@ public class Haffen {
     Schiff[] hafenCapacity = new Schiff[MAX_CAPACITY];
 
     Haffen(int schiffCount) {
-        if(schiffCount >= MAX_CAPACITY){
+        if (schiffCount >= MAX_CAPACITY) {
             throw new IllegalArgumentException("max capacity in Haffen is 100 !!!");
         }
 
-        for(int i = 0; i < schiffCount; i++) {
+        for (int i = 0; i < schiffCount; i++) {
             this.hafenCapacity[i] = new Schiff();
         }
     }
@@ -20,8 +20,8 @@ public class Haffen {
         int emptySpace = 0;
         int occupiedPlace = 0;
 
-        for(Schiff value : this.hafenCapacity) {
-            if(value == null) {
+        for (Schiff value : this.hafenCapacity) {
+            if (value == null) {
                 emptySpace++;
             } else {
                 occupiedPlace++;
