@@ -58,25 +58,20 @@ public class ArrayEinfach {
 
     static char[] deutscheBuchstaben() {
         final int ALPHABET_LENGTH = 30;
-        char[] alphabet = new char[ALPHABET_LENGTH];
         char[] deutscheAlphabet = new char[ALPHABET_LENGTH];
 
         //char[] deutscheUmlautePlusEszett = join(deutscheUmlaute(), new char[]{'ß'}); // TODO: override join return type to char
 
         for (char i = 'a', j = 0; i <= 'z'; i++, j++) {
-            alphabet[j] = i;
-        }
-
-        for (int i = 0; i < alphabet.length; i++) {
-            deutscheAlphabet[i] = alphabet[i];
+            deutscheAlphabet[j] = i;
         }
 
         for (int q = 0; q < deutscheUmlaute().length; q++) {
-            deutscheAlphabet[(alphabet.length - deutscheUmlaute().length - new char[]{'ß'}.length) + q] = deutscheUmlaute()[q];
+            deutscheAlphabet[(deutscheAlphabet.length - deutscheUmlaute().length - new char[]{'ß'}.length) + q] = deutscheUmlaute()[q];
         }
 
         for (int j = 0; j < new char[]{'ß'}.length; j++) {
-            deutscheAlphabet[(alphabet.length - new char[]{'ß'}.length) + j] = new char[]{'ß'}[j];
+            deutscheAlphabet[(deutscheAlphabet.length - new char[]{'ß'}.length) + j] = new char[]{'ß'}[j];
         }
 
         return deutscheAlphabet;
