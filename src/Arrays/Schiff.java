@@ -10,6 +10,7 @@ public class Schiff {
         this.name = name;
     }
 
+    @Override
     public String toString() {
         if (this.name == null) {
             return "Hi from Schiff";

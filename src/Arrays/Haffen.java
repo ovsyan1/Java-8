@@ -16,6 +16,7 @@ public class Haffen {
         }
     }
 
+    @Override
     public String toString() {
         int emptySpace = 0;
         int occupiedPlace = 0;
