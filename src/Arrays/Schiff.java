@@ -1,7 +1,7 @@
 package Arrays;
 
 public class Schiff {
-    String name;
+    private String name;
 
     Schiff() {
     }

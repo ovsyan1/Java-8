@@ -3,8 +3,8 @@ package Arrays;
 import java.util.Arrays;
 
 public class Haffen {
-    final int MAX_CAPACITY = 100;
-    Schiff[] hafenCapacity = new Schiff[MAX_CAPACITY];
+    private final int MAX_CAPACITY = 100;
+    private Schiff[] hafenCapacity = new Schiff[MAX_CAPACITY];
 
     Haffen(int schiffCount) {
         if (schiffCount >= MAX_CAPACITY) {
