@@ -50,6 +50,10 @@ public class IntMatrix {
 
     @Override
     public boolean equals(Object obj) {
+        if(this == obj) {
+            return true;
+        }
+
         IntMatrix m1 = this;
         IntMatrix m2 = (IntMatrix) obj;
 
