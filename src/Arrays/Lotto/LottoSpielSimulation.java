@@ -31,7 +31,6 @@ public class LottoSpielSimulation {
         for (int i = EURO_GUTHABEN; i > 0; i--) {
             lotto.ziehen();
             int localGewinn = lotto.vergleichen(tipp);
-            System.out.println(localGewinn);
             if (localGewinn > 0) {
                 gewinnAnzahl++;
                 gesamtGewinn += (((int) Math.pow(10, localGewinn)) / 10);

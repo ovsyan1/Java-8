@@ -6,7 +6,7 @@ import java.util.Random;
 public class LottoTipp {
     private int anzahlKugel;
     private int anzahlKugelGesamt;
-    int[] arr;
+    int[] gezogeneKugeln;
 
     LottoTipp(int anzahlKugel, int anzahlKugelGesamt) {
         this.anzahlKugel = anzahlKugel;
@@ -15,7 +15,7 @@ public class LottoTipp {
 
     @Override
     public String toString() {
-        return "Tipp " + this.anzahlKugel + " aus " + this.anzahlKugelGesamt + ". " + Arrays.toString(arr);
+        return "Tipp " + this.anzahlKugel + " aus " + this.anzahlKugelGesamt + ". " + Arrays.toString(gezogeneKugeln);
     }
 
     void abgeben() {
@@ -28,6 +28,6 @@ public class LottoTipp {
 
         Arrays.sort(localArr);
 
-        arr = localArr;
+        gezogeneKugeln = localArr;
     }
 }
