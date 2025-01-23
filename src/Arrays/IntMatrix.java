@@ -11,7 +11,7 @@ public class IntMatrix {
     }
 
     IntMatrix(int zeile, int spalte, int value) {
-        arr = new int[zeile][spalte];
+        this(zeile, spalte);
 
         for (int i = 0; i < this.arr.length; i++) {
             for (int j = 0; j < this.arr[i].length; j++) {
