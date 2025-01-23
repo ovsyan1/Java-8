@@ -1,6 +1,5 @@
 package Arrays;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class IntMatrix {
@@ -49,14 +48,21 @@ public class IntMatrix {
         return new IntMatrix(len1, len2, randomValue);
     }
 
-    boolean equals(IntMatrix matrix) {
-        if(this.arr.length != matrix.arr.length || this.arr[1].length != matrix.arr[1].length) {
+    @Override
+    public boolean equals(Object obj) {
+        IntMatrix m1 = this;
+        IntMatrix m2 = (IntMatrix) obj;
+
+        int[][] a1 = m1.arr;
+        int[][] a2 = m2.arr;
+
+        if (a1.length != a2.length || a1[1].length != a2[1].length) {
             return false;
         }
 
-        for (int i = 0; i < this.arr.length; i++) {
-            for (int j = 0; j < this.arr[i].length; j++) {
-                if (this.arr[i][j] == matrix.arr[i][j]) {
+        for (int i = 0; i < a1.length; i++) {
+            for (int j = 0; j < a1[i].length; j++) {
+                if (a1[i][j] == a2[i][j]) {
                     return true;
                 }
                 return false;
