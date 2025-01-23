@@ -1,5 +1,6 @@
 package Arrays.Lotto;
 
+import javax.swing.*;
 import java.util.SimpleTimeZone;
 
 public class LottoSpielSimulation {
@@ -11,12 +12,15 @@ public class LottoSpielSimulation {
         int gesamtGewinn = 0;
 
         LottoSpiel lotto = new LottoSpiel(anzahlKugel, anzahlKugelGesamt);
-
+        lotto.ziehen();
         System.out.println(lotto);
 
+
         LottoTipp tipp = new LottoTipp(anzahlKugel, anzahlKugelGesamt);
+        tipp.abgeben();
         System.out.println(tipp);
 
+        tipp.abgeben();
         int gewinn = lotto.vergleichen(tipp);
         System.out.println(gewinn);
 
@@ -25,7 +29,9 @@ public class LottoSpielSimulation {
         System.out.println();
 
         for (int i = EURO_GUTHABEN; i > 0; i--) {
+            lotto.ziehen();
             int localGewinn = lotto.vergleichen(tipp);
+            System.out.println(localGewinn);
             if (localGewinn > 0) {
                 gewinnAnzahl++;
                 gesamtGewinn += (((int) Math.pow(10, localGewinn)) / 10);
