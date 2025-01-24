@@ -46,6 +46,6 @@ public class LottoSpielSimulation {
             return numberOfCoincidences + " richtige: " + numberOfCoincidences + " Euro";
         }
 
-        return numberOfCoincidences + " richtige: " + ((int) Math.pow(10, numberOfCoincidences)) / 10 + " Euro";
+        return numberOfCoincidences + " richtige: " + (int) Math.pow(10, numberOfCoincidences - 1)  + " Euro";
     }
 }
