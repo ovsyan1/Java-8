@@ -17,7 +17,7 @@ class Figur {
         return this.yCoordinate;
     }
 
-    String getCoordinate() {
+    String getCoordinates() {
         return "X: " + this.getXCoordinate() + " Y: " + this.getYCoordinate();
     }
 
