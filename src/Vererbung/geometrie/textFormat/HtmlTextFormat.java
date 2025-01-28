@@ -8,6 +8,4 @@ class HtmlTextFormat extends TextHandler {
     String bold() {
         return "<b>" + this.text + "</b>";
     }
-
-
 }
