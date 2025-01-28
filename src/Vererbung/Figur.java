@@ -1,4 +1,4 @@
-package Arrays.Vererbung;
+package Vererbung;
 
 class Figur {
     private int xCoordinate;

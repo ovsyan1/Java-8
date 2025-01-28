@@ -1,4 +1,4 @@
-package Arrays.Vererbung;
+package Vererbung;
 
 class Rechteck extends Figur {
     private int breite;

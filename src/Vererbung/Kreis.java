@@ -1,4 +1,4 @@
-package Arrays.Vererbung;
+package Vererbung;
 
 class Kreis extends Figur {
     private int radius;
