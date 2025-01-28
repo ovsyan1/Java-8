@@ -1,4 +1,4 @@
-package Vererbung;
+package Vererbung.geometrie;
 
 public class Geometrie {
     public static void main(String[] args) {

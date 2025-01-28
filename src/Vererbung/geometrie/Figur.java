@@ -1,4 +1,4 @@
-package Vererbung;
+package Vererbung.geometrie;
 
 class Figur {
     private int xCoordinate;

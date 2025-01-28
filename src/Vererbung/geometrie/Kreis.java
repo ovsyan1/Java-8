@@ -1,4 +1,4 @@
-package Vererbung;
+package Vererbung.geometrie;
 
 class Kreis extends Figur {
     private int radius;

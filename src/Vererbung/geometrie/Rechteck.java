@@ -1,4 +1,4 @@
-package Vererbung;
+package Vererbung.geometrie;
 
 class Rechteck extends Figur {
     private int breite;
