@@ -16,10 +16,10 @@ public class Polymorphie {
 
         Figur [] arr = p.setRandomArray(5);
 
-        getFlaeche(arr);
+        getFlaecheFromRndArr(arr);
     }
 
-    static void getFlaeche(Figur[] arr) {
+    static void getFlaecheFromRndArr(Figur[] arr) {
         for(Figur f : arr) {
             System.out.println(f + " meine Fläche ist: " + f.getFlaeche(f));
         }

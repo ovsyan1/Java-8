@@ -18,11 +18,12 @@ class Figur {
     }
 
     int getFlaeche(Figur f) {
+        // if (f instanceof Rechteck r) // kann auch so sein
         if (f instanceof Rechteck) {
             Rechteck r = (Rechteck) f;
 
             return r.getBreite() * r.getHoehe();
-            // return ((Rechteck)f).getBreite() * ((Rechteck)f).getHoehe();
+            // return ((Rechteck)f).getBreite() * ((Rechteck)f).getHoehe(); // kann auch so sein
         }
 
         if (f instanceof Kreis) {
