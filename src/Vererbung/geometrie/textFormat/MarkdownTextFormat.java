@@ -6,6 +6,6 @@ class MarkdownTextFormat extends TextHandler {
     }
 
     String bold() {
-        return "__" + this.text + "__";
+        return "__" + plain() + "__";
     }
 }

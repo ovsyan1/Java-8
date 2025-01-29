@@ -1,7 +1,7 @@
 package Vererbung.geometrie.textFormat;
 
 class TextHandler {
-    String text;
+    private String text;
 
     TextHandler(String text) {
         this.text = text;

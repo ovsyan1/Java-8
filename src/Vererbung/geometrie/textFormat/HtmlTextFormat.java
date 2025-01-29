@@ -6,6 +6,6 @@ class HtmlTextFormat extends TextHandler {
     }
 
     String bold() {
-        return "<b>" + this.text + "</b>";
+        return "<b>" + plain() + "</b>";
     }
 }
