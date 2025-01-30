@@ -10,4 +10,8 @@ class Kreis extends Figur {
     int getRadius() {
         return this.radius;
     }
+
+    int getFlaeche() {
+        return (int) (2 * this.radius * Math.PI);
+    }
 }

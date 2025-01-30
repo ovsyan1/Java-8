@@ -17,20 +17,21 @@ class Figur {
         return x;
     }
 
-    int getFlaeche(Figur f) {
+    int getFlaeche() {
+    //int getFlaeche(Figur f) {
         // if (f instanceof Rechteck r) // kann auch so sein
-        if (f instanceof Rechteck) {
-            Rechteck r = (Rechteck) f;
+        // if (f instanceof Rechteck) {
+        //   Rechteck r = (Rechteck) f;
+        //
+        //  return r.getBreite() * r.getHoehe();
+        //  return ((Rechteck)f).getBreite() * ((Rechteck)f).getHoehe(); // kann auch so sein
+        // }
 
-            return r.getBreite() * r.getHoehe();
-            // return ((Rechteck)f).getBreite() * ((Rechteck)f).getHoehe(); // kann auch so sein
-        }
-
-        if (f instanceof Kreis) {
-            Kreis k = (Kreis) f;
-
-            return (int) (2 * k.getRadius() * Math.PI);
-        }
+        //  if (f instanceof Kreis) {
+        //    Kreis k = (Kreis) f;
+        //
+        //    return (int) (2 * k.getRadius() * Math.PI);
+        // }
 
         return 0;
     }

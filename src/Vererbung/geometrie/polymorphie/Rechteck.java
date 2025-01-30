@@ -16,4 +16,8 @@ class Rechteck extends Figur {
     int getHoehe() {
         return this.hoehe;
     }
+
+    int getFlaeche() {
+        return this.breite * this.hoehe;
+    }
 }

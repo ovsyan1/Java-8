@@ -7,8 +7,8 @@ public class Polymorphie {
         Rechteck rechteck = new Rechteck(3, 4);
         Kreis kreis = new Kreis(10);
 
-        System.out.println(rechteck + "  und das ist meine Fläche: " + rechteck.getFlaeche(rechteck));
-        System.out.println(kreis + " und das ist meine Fläche: " + kreis.getFlaeche(kreis));
+        System.out.println(rechteck + "  und das ist meine Fläche: " + rechteck.getFlaeche());
+        System.out.println(kreis + " und das ist meine Fläche: " + kreis.getFlaeche());
 
         System.out.println("\n*****");
 
@@ -21,7 +21,7 @@ public class Polymorphie {
 
     static void getFlaecheFromRndArr(Figur[] arr) {
         for(Figur f : arr) {
-            System.out.println(f + " meine Fläche ist: " + f.getFlaeche(f));
+            System.out.println(f + " meine Fläche ist: " + f.getFlaeche());
         }
     }
 
