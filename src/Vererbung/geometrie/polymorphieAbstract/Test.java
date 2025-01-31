@@ -1,6 +1,7 @@
 package Vererbung.geometrie.polymorphieAbstract;
 
 public class Test {
+    static int x = 10;
     public static void main(String[] args) {
         Hund hund = new Hund("Rex", 5, true);
         Katze katze = new Katze("Tom", 8, false);
