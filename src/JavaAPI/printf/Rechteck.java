@@ -1,6 +1,6 @@
 package JavaAPI.printf;
 
-class Rechteck extends Figur {
+class Rechteck implements Figur {
     private int breite;
     private int hoehe;
 
@@ -17,7 +17,7 @@ class Rechteck extends Figur {
         return hoehe;
     }
 
-    int getFläche() {
+    public int getFläche() {
      return this.breite * this.hoehe;
     }
 

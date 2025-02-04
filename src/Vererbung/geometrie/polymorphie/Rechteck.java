@@ -5,7 +5,7 @@ class Rechteck extends Figur {
     private int hoehe;
 
     Rechteck(int breite, int hoehe) {
-        this.breite = breite;
+        this.breite = breite;       
         this.hoehe = hoehe;
     }
 

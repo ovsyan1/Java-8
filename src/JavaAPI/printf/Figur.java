@@ -1,5 +1,5 @@
 package JavaAPI.printf;
 
-abstract class Figur {
+abstract interface Figur {
     abstract int getFläche();
 }

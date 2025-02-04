@@ -1,6 +1,6 @@
 package JavaAPI.printf;
 
-class Kreis extends Figur {
+class Kreis implements Figur {
     private int radius;
     Kreis(int radius) {
         this.radius = radius;
@@ -10,7 +10,7 @@ class Kreis extends Figur {
         return this.radius;
     }
 
-    int getFläche() {
+    public int getFläche() {
         return (int)(this.radius * 2 * Math.PI);
     }
 
