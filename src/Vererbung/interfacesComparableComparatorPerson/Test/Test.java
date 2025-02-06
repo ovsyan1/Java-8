@@ -14,8 +14,7 @@ public class Test {
         System.out.println("Original: " + Arrays.toString(persons));
 
         System.out.println();
-        Comparator<Person> cmp = new CustomPersonComparator();
-        Arrays.sort(persons, cmp);
+        Arrays.sort(persons);
         System.out.println("Sorted: " + Arrays.toString(persons));
 
         System.out.println();
