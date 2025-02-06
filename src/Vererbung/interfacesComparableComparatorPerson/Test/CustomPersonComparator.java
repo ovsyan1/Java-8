@@ -2,7 +2,7 @@ package Vererbung.interfacesComparableComparatorPerson.Test;
 
 import java.util.Comparator;
 
-class CustomStringComparator implements Comparator<Person> {
+class CustomPersonComparator implements Comparator<Person> {
     @Override
     public int compare(Person p1, Person p2) {
         int result = p1.getNachname().compareTo(p2.getNachname());
