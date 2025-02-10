@@ -1,27 +1,39 @@
 package Vererbung.InterfacesDefault;
 
 class Basic implements Sum, Container {
-    //private int sum;
-    //private int size;
-    private int value;
+    private int sum;
+//    private int size;
+    private int[] container = new int[3];
 
     @Override
     public void add(int val) {
-        this.value = this.value + val;
+        this.sum = this.sum + val;
+//        this.size++;
+        this.saveInArr(val);
+    }
+
+    private void saveInArr(int val) {
+        for(int i = 0; i < container.length;i++) {
+            container[i] = val;
+        }
     }
 
     @Override
-    public void add(int val1, int val2) {
-        //return 1;
+    public void add(int a, int b) {
+        this.add(a);
+        this.add(b);
     }
 
     @Override
     public int getSum() {
-        return this.value;
+        return this.sum;
     }
 
     @Override
+//    public int getSize() {
+//        return this.size;
+//    }
     public int getSize() {
-        return this.value;
+        return this.container.length;
     }
 }
