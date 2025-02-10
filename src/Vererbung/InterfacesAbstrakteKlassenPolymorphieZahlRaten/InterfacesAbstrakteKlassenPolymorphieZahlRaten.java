@@ -4,9 +4,7 @@ import java.util.Random;
 
 public class InterfacesAbstrakteKlassenPolymorphieZahlRaten {
     public static void main(String[] args) {
-        Random rnd = new Random();
-
-        int x = rnd.nextInt(10) + 1;
+        int x = new Random().nextInt(10) + 1;
 
         System.out.println("x: " + x);
 
@@ -44,5 +42,14 @@ public class InterfacesAbstrakteKlassenPolymorphieZahlRaten {
         }
 
         System.out.println("Main result: " + mainResult);
+
+        IntOperation op = new Add(5)
+                .andThen(new ChangeSign())
+                .andThen(new Multiply(2))
+                .andThen(new Subtract(3));
+
+        int result = op.execute(2); // result ist -17
+
+        System.out.println("Fatory result: " + result);
     }
 }
