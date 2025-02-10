@@ -1,14 +1,12 @@
 package Vererbung.InterfacesAbstrakteKlassenPolymorphieZahlRaten;
 
-class Divide implements IntOperation {
-    private int value;
-
+class Divide extends AbstractIntOperation implements IntOperation {
     Divide(int value) {
-        this.value = value;
+        super(value);
     }
 
+    @Override
     public int execute(int value) {
         return value / this.value;
     }
-
 }

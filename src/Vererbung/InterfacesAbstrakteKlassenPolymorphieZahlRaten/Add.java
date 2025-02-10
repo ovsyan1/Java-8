@@ -1,12 +1,11 @@
 package Vererbung.InterfacesAbstrakteKlassenPolymorphieZahlRaten;
 
-class Add implements IntOperation {
-    private int value;
-
+class Add extends AbstractIntOperation implements IntOperation {
     Add(int value) {
-        this.value = value;
+        super(value);
     }
 
+    @Override
     public int execute(int value) {
         return this.value + value;
     }

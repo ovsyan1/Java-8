@@ -1,14 +1,12 @@
 package Vererbung.InterfacesAbstrakteKlassenPolymorphieZahlRaten;
 
-class Multiply implements IntOperation {
-    private int value;
-
+class Multiply extends AbstractIntOperation implements IntOperation {
     Multiply(int value) {
-        this.value = value;
+        super(value);
     }
 
+    @Override
     public int execute(int value) {
         return this.value * value;
     }
-
 }
