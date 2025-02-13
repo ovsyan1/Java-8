@@ -1,7 +1,5 @@
 package Vererbung.JavaTipp;
 
-import java.util.function.Predicate;
-
 class JavaTipp {
     private String text;
     private String[] themen;
@@ -19,7 +17,7 @@ class JavaTipp {
     }
 
     String[] getThemen() {
-        return themen;
+        return this.themen;
     }
 
 
