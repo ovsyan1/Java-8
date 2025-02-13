@@ -1,8 +1,6 @@
 package Vererbung.JavaTipp;
 
 import java.util.function.Predicate;
-import java.util.Arrays;
-import java.util.Comparator;
 
 public class Test {
     public static void main(String[] args) {
@@ -52,34 +50,70 @@ public class Test {
 
         customSearch(javaTipps, (x) -> true);
         System.out.println();
+
         customSearch(javaTipps, (x) -> x.getText().contains("Klasse"));
         System.out.println();
+
         customSearch(javaTipps, (x) -> x.getThemen().length == 2);
         System.out.println();
+
         customSearch(javaTipps, (x) -> {
-            for(String tipp : x.getThemen()) {
-                if(tipp == "Klassen") {
+            for (String tipp : x.getThemen()) {
+                if (tipp.equals("Klassen")) {
                     return true;
                 }
             }
             return false;
         });
         System.out.println();
+
         customSearch(javaTipps, (x) -> {
-            for(String tipp : x.getThemen()) {
-                System.out.println("------> " + tipp);
-                if(tipp.equals("Klassen")) {
-                    return true;
+            boolean isClass = false;
+            boolean isInheritance = false;
+            for (String tip : x.getThemen()) {
+                if (tip.equals("Klassen")) {
+                    isClass = true;
                 }
+                if (tip.equals("Vererbung")) {
+                    isInheritance = true;
+                }
+            }
+            return isClass && isInheritance;
+        });
+        System.out.println();
+
+        customSearch(javaTipps, (x) -> {
+            boolean isClass = false;
+            boolean isInterface = false;
+            for (String tipp : x.getThemen()) {
+                if (tipp.equals("Klassen")) {
+                    isClass = true;
+                }
+                if (tipp.equals("Interfaces")) {
+                    isInterface = true;
+                }
+            }
+            return isClass && isInterface;
+        });
+        System.out.println();
+
+        customSearch(javaTipps, (x) -> {
+            if (x.getText().contains("Klasse erweitern")) {
+                for (String tipp : x.getThemen()) {
+                    if (tipp.equals("Klassen")) {
+                        return true;
+                    }
+                }
+                return false;
             }
             return false;
         });
     }
 
-    static void customSearch(JavaTipp[] tipps, Predicate<JavaTipp> p) {
-        for (JavaTipp tipp : tipps) {
-            if (p.test(tipp)) {
-                System.out.println(tipp);
+    static void customSearch(JavaTipp[] tips, Predicate<JavaTipp> p) {
+        for (JavaTipp tip : tips) {
+            if (p.test(tip)) {
+                System.out.println(tip);
             }
         }
     }
