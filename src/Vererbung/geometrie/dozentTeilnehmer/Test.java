@@ -9,7 +9,8 @@ class Test {
         dozent.leitenDenKurs(kurs);
         System.out.println(kurs);
 
-        teilnehmer.kursTeilnehmen(kurs);
-        System.out.println(kurs);
+        Kurs kurs1 = new Kurs(6789);
+        teilnehmer.kursTeilnehmen(kurs1);
+        System.out.println(kurs1);
     }
 }

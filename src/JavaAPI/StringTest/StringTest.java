@@ -1,4 +1,4 @@
-package JavaAPI.printf.StringTest;
+package JavaAPI.StringTest;
 
 public class StringTest {
     public static void main(String[] args) {
