@@ -20,10 +20,16 @@ public class StringEinfach {
 
         String fileStr5 = ".txt";
         System.out.println(isTextFile(fileStr5));
+
+        String fileStr6 = null;
+        System.out.println(isTextFile(fileStr6));
+
+        String fileStr7 = "";
+        System.out.println(isTextFile(fileStr7));
     }
 
     static boolean isTextFile(String str) {
-        if(str.indexOf(".") == 0) {
+        if(str == null || str.indexOf(".") == 0) {
             return false;
         }
         int indexDot = str.lastIndexOf(".");
