@@ -12,12 +12,8 @@ public class StringIstImmerEinfach {
             if (i % 10 == 0) {
                 System.out.print(i);
             } else {
-                if (i > 10) {
-
-                }
                 System.out.print(" ");
             }
-
         }
 
         System.out.println();

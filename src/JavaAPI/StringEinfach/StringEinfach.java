@@ -14,10 +14,13 @@ public class StringEinfach {
 
         String fileStr3 = "Person.tXT";
         System.out.println(isTextFile(fileStr3));
+
+        String fileStr4 = "hallo.welt.txt";
+        System.out.println(isTextFile(fileStr4));
     }
 
     static boolean isTextFile(String str) {
-        int indexDot = str.indexOf(".");
+        int indexDot = str.lastIndexOf(".");
 
         String fileFormat = str.substring(indexDot + 1);
 
