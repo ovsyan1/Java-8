@@ -17,9 +17,15 @@ public class StringEinfach {
 
         String fileStr4 = "hallo.welt.txt";
         System.out.println(isTextFile(fileStr4));
+
+        String fileStr5 = ".txt";
+        System.out.println(isTextFile(fileStr5));
     }
 
     static boolean isTextFile(String str) {
+        if(str.indexOf(".") == 0) {
+            return false;
+        }
         int indexDot = str.lastIndexOf(".");
 
         String fileFormat = str.substring(indexDot + 1);
