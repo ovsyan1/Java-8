@@ -135,16 +135,14 @@ public class ArrayListTest {
         System.out.println("arrStr8: " + arrStr8);
 
         for (int i = 0; i < arrStr8.size(); i++) {
-            if (arrStr8.get(i).equals("fr")) {
-                arrStr8.remove("fr");
-            }
+            arrStr8.remove("fr");
         }
 
         System.out.println("arrStr8: " + arrStr8);
 
-        int[] a1 = { 1, 2, 3};
-        int[] a2 = { -7, -5 };
-        int[] a3 = { 101, 202, 303 };
+        int[] a1 = {1, 2, 3};
+        int[] a2 = {-7, -5};
+        int[] a3 = {101, 202, 303};
 
         ArrayList<int[]> lastButNotLeastArr = new ArrayList<>();
 
@@ -152,7 +150,7 @@ public class ArrayListTest {
         lastButNotLeastArr.add(a2);
         lastButNotLeastArr.add(a3);
 
-        for(int[] item : lastButNotLeastArr) {
+        for (int[] item : lastButNotLeastArr) {
             System.out.println(Arrays.toString(item));
         }
     }
