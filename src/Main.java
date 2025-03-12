@@ -1,5 +1,43 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+class MyEventListener implements ActionListener {
+    static int clickCounter;
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        clickCounter++;
+        System.out.println("Click");
+        System.out.println("ClickCounter: " + clickCounter);
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
+        JFrame frame = new JFrame("Hello World Swing");
+        frame.setLocation(2100, 200);
+        frame.setSize(300, 200);
+
+        JLabel label = new JLabel("My first desktop app via Core Java");
+        frame.getContentPane().add(label);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel myContentPane = new JPanel();
+
+        JButton mainButton = new JButton("Click me");
+
+        frame.add(mainButton, BorderLayout.NORTH);
+        frame.add(new JButton("change lng"), BorderLayout.SOUTH);
+        frame.add(new JComboBox<>(), BorderLayout.EAST);
+        frame.add(new JCheckBox("QWERTY"), BorderLayout.WEST);
+
+        mainButton.addActionListener(new MyEventListener());
+
+        frame.setVisible(true);
+
     }
 }
 
